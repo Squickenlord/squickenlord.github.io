@@ -1,0 +1,33 @@
+<!-- HTML code -->
+<div id="embeddedBrowser">
+  <input type="text" id="urlInput" placeholder="Enter URL">
+  <button id="loadButton">Load</button>
+  <br><br>
+  <iframe id="webPageFrame"></iframe>
+</div>
+
+<!-- CSS code -->
+<style>
+#embeddedBrowser {
+  width: 800px;
+  height: 600px;
+  border: 1px solid #ccc;
+}
+
+#webPageFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+
+<!-- JavaScript code -->
+<script>
+const frame = document.getElementById("webPageFrame");
+const input = document.getElementById("urlInput");
+const button = document.getElementById("loadButton");
+
+button.addEventListener("click", function() {
+  frame.src = input.value;
+});
+</script>
